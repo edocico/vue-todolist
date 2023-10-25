@@ -8,6 +8,10 @@ const { createApp } = Vue
                 text: 'fare la spesa',
                 done: false
             },
+            {
+                text: 'andare al supermercato',
+                done: false
+            }
         ]
       }
     }

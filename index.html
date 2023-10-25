@@ -22,7 +22,8 @@
             <section class="list-section">
                 <div class="container">
                     <ul>
-                        <li>{{ list[0].text }}
+                        <li v-for="(task, index) in list" :key="index">
+                            {{ task.text }}
                             <i class="fa-solid fa-xmark"></i>
                         </li>
                     </ul>
