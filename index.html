@@ -16,8 +16,8 @@
         </header>
         <main class="app-main">
             <section class="input-section">
-                <input type="text" placeholder=".......inserisci un task" class="text-line">
-                <button class="input-button">Aggiungi</button>
+                <input type="text" placeholder=".......inserisci un task" class="text-line" v-model="newTask.text">
+                <button class="input-button" @click="addNewTask()">Aggiungi</button>
             </section>
             <section class="list-section">
                 <div class="container">
