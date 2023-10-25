@@ -22,8 +22,9 @@
             <section class="list-section">
                 <div class="container">
                     <ul v-if="list.length > 0">
-                        <li v-for="(task, index) in list" :key="index" :class="list.done === true ? 'text-over' : ''">
+                        <li v-for="(task, index) in list" :key="index" :class="list[index].done === true ? 'text-over' : ''" @click.stop="taskDone(index)">
                             {{ task.text }}
+                            
                             <i class="fa-solid fa-xmark" @click.stop="deleteTask(index)"></i>
                         </li>
                     </ul>
