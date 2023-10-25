@@ -13,6 +13,10 @@
     border-bottom: 1px solid black;
 }
 
+/*h1 {
+    text-decoration: line-through;
+}*/
+
 .input-section {
     display: flex;
     justify-content: center;
@@ -58,4 +62,12 @@ li {
     border-radius: 20px;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.text-over {
+    text-decoration: line-through;
+}
+
+span {
+    font-size: 30px;
 }

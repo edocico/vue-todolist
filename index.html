@@ -16,17 +16,18 @@
         </header>
         <main class="app-main">
             <section class="input-section">
-                <input type="text" placeholder=".......inserisci un task" class="text-line" v-model="newTask.text">
+                <input type="text" placeholder=".......inserisci un task" class="text-line" v-model="newText">
                 <button class="input-button" @click="addNewTask()">Aggiungi</button>
             </section>
             <section class="list-section">
                 <div class="container">
-                    <ul>
-                        <li v-for="(task, index) in list" :key="index">
+                    <ul v-if="list.length > 0">
+                        <li v-for="(task, index) in list" :key="index" :class="list.done === true ? 'text-over' : ''">
                             {{ task.text }}
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark" @click.stop="deleteTask(index)"></i>
                         </li>
                     </ul>
+                    <span v-else>Nessun elemento presente</span>
                 </div>
             </section>
         </main>

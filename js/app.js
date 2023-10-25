@@ -3,10 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        newTask: {
-            text: '',
-            done: false
-        },
+        newText: '',
         list: [
             {
                 text: 'fare la spesa',
@@ -16,15 +13,24 @@ const { createApp } = Vue
                 text: 'andare al supermercato',
                 done: false
             },
-        ]
+        ],
+        activeTask: 0,
       }
     },
     methods: {
         addNewTask() {
-            if (this.newTask.text.length > 0) {
-                this.list.unshift(this.newTask);
+            if (this.newText.length >= 5) {
+                const newTask = {
+                    text: this.newText,
+                    done: false
+                }
+                this.list.unshift(newTask);
+                this.newText = ''
             }
-            //this.newTask.text = '';
+            
+        },
+        deleteTask(taskIndex) {
+            this.list.splice(taskIndex, 1)
         }
     },
     mounted() {
