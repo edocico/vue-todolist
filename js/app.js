@@ -22,8 +22,9 @@ const { createApp } = Vue
     methods: {
         addNewTask() {
             if (this.newTask.text.length > 0) {
-                this.list.unshift(this.newTask)
+                this.list.unshift(this.newTask);
             }
+            //this.newTask.text = '';
         }
     },
     mounted() {
