@@ -48,4 +48,10 @@
 li {
     background-color: beige;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    align-items: center;
 }

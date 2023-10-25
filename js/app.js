@@ -3,7 +3,12 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        list: [
+            {
+                text: 'fare la spesa',
+                done: false
+            },
+        ]
       }
     }
   }).mount('#app')

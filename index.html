@@ -16,13 +16,15 @@
         </header>
         <main class="app-main">
             <section class="input-section">
-                <input type="text" placeholder="inserisci un task" class="text-line">
+                <input type="text" placeholder=".......inserisci un task" class="text-line">
                 <button class="input-button">Aggiungi</button>
             </section>
             <section class="list-section">
                 <div class="container">
                     <ul>
-                        <li></li>
+                        <li>{{ list[0].text }}
+                            <i class="fa-solid fa-xmark"></i>
+                        </li>
                     </ul>
                 </div>
             </section>
