@@ -12,14 +12,15 @@ const { createApp } = Vue
     },
     methods: {
         addNewTask() {
-            if (this.newText.length >= 5) {
+            const textInput = this.newText.trim()
+            if (textInput.length >= 5) {
                 const newTask = {
-                    text: this.newText,
+                    text: textInput,
                     done: false
                 }
                 this.list.unshift(newTask);
-                this.newText = ''
             }
+            this.newText = ''
             
         },
         deleteTask(taskIndex) {
